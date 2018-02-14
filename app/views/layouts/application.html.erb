@@ -4,16 +4,26 @@
     <title>SecondApp</title>
     <%= csrf_meta_tags %>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-MtIP/3oPOnaTWtZGXE7C1YfcWSIgL8W+tyWY425Vav0Uten58co0sWnIfridWjr9" crossorigin="anonymous">
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="<%= students_path %>">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= pages_landing_path %>">Landing</a>
+          </li>
+      </div>
+    </nav>
     <div class= 'container'>
       <%= yield %>
+      <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-MtIP/3oPOnaTWtZGXE7C1YfcWSIgL8W+tyWY425Vav0Uten58co0sWnIfridWjr9" crossorigin="anonymous">
     </div>
   </body>
 </html>
